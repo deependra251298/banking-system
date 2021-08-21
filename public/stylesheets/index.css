@@ -1,0 +1,90 @@
+body {
+  background-color: #69124a;
+}
+
+nav {
+  background-color: #275070;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-brand:hover {
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.13rem;
+  line-height: 2rem;
+  cursor: not-allowed;
+}
+
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: white;
+  font-weight: 600px;
+  font-size: 20px;
+  letter-spacing: 0.1rem;
+  margin-right: 50px;
+}
+
+.homePage {
+  color: black;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1556155092-490a1ba16284?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b25saW5lJTIwYmFua2luZ3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+  margin: auto;
+}
+
+.all-customer {
+  margin: auto;
+  text-align: center;
+}
+
+.all-customer .border-tr,
+.history-table .border-tr {
+  border-bottom: 2px solid white;
+}
+
+.history-table {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 7rem;
+}
+
+.one-customer {
+  max-width: 45rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  position: relative;
+  background-color: #383838;
+  color: white;
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.one-customer a {
+  margin-top: 10px;
+  margin-left: 16rem;
+}
+
+.col-1 {
+  margin-top: 7rem;
+}
+
+.transfer {
+  margin-bottom: 7.7rem;
+}
+
+.transfer button {
+  padding: 8px 200px;
+}
+
+footer {
+  text-align: center;
+}

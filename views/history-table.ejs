@@ -1,0 +1,39 @@
+<% layout('./layouts/boilerplates') %>
+<div class="text-white">
+  <h1 class="mb-2">History List</h1>
+  <div class="history-table">
+    <table class="table table-dark table-borderless">
+      <thead>
+        <tr class="border-tr">
+          <th scope="col">S.N</th>
+          <th scope="col">Sender Name</th>
+          <th scope="col">Sender Account</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Reciever Name</th>
+          <th scope="col">Reciever Account</th>
+          <th scope="col">Date and Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let history of histories) {%> <% const dates=history.createdDate
+        %> <% const month=dates.getMonth()+1 %> <% const date=dates.getDate() %>
+        <% const year=dates.getFullYear() %> <% const minutes=dates.getMinutes()
+        %> <% const hours=dates.getHours() %> <% const second=dates.getSeconds()
+        %>
+        <tr>
+          <th><%= i++ %></th>
+          <th><%= history.senderName %></th>
+          <th><%=history.senderAccount %></th>
+          <th><%=history.amount %></th>
+          <th><%=history.recieverName %></th>
+          <th><%=history.recieverAccount %></th>
+          <th>
+            <%=date %>/<%=month %>/<%=year %>, <%= hours%>:<%=minutes %>:<%=
+            second%>
+          </th>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>

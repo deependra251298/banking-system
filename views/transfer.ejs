@@ -1,0 +1,50 @@
+<%- layout('./layouts/boilerplates') %>
+<div class="transfer text-white">
+  <h3>Transfer Money from your account to other account</h3>
+  <form action="/banking/<%= customer._id %>?_method=PUT" method="POST">
+    <div class="row justify-content-around">
+      <div class="col-5">
+        <h4>Sender Detail</h4>
+        <div class="mt-3">
+          <label for="senderAccount" class="form-label">Account Number</label>
+          <select name="senderAccount" class="form-select" id="senderAccount">
+            <option selected value="<%= customer.accountNumber %>">
+              <%= customer.accountNumber %>
+            </option>
+          </select>
+        </div>
+        <div class="mt-3">
+          <label for="amount" class="form-label">Amount</label>
+          <input
+            type="number"
+            class="form-control"
+            name="amount"
+            id="amount"
+            min="1"
+            max="50001"
+            required
+          />
+        </div>
+      </div>
+      <div class="col-1">
+        <h1><i class="bi bi-wallet2"></i></h1>
+      </div>
+      <div class="col-5">
+        <h4>Reciever Detail</h4>
+        <div class="mt-3">
+          <label for="reciever" class="form-label">Account Number</label>
+          <select name="accountNumber" class="form-select" id="reciever">
+            <option selected>Select Reciever Account</option>
+            <% for(let transfer of transCustomer) {%>
+            <%if(customer.accountNumber===transfer.accountNumber) {%> <%}else{%>
+            <option value="<%= transfer.accountNumber %> ">
+              <%= transfer.accountNumber %>
+            </option>
+            <% } %> <% } %>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-warning btn-md m-3">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,13 @@
+<%- layout('./layouts/boilerplates') %>
+<div class="one-customer">
+  <h1>Hello, <%= customer.name %></h1>
+  <h3>Email : <%= customer.email %></h3>
+  <h3>Account No. : <%= customer.accountNumber %></h3>
+
+  <h3>Current Balance : <%= customer.currentBalance %></h3>
+  <a
+    href="/banking/<%=customer._id%>/transfer_money"
+    class="btn btn-info btn-md"
+    >Transfer Money</a
+  >
+</div>
