@@ -1,9 +1,9 @@
 body {
-  background-color: #69124a;
+  background-color: #a02575;
 }
 
 nav {
-  background-color: #275070;
+  background-color: #4d8ec0;
 }
 
 .navbar .navbar-brand,
@@ -61,7 +61,7 @@ nav {
   margin-top: 6rem;
   margin-bottom: 8rem;
   position: relative;
-  background-color: #383838;
+  background-color: #312b2b;
   color: white;
   border-radius: 14px;
   padding: 1rem;
